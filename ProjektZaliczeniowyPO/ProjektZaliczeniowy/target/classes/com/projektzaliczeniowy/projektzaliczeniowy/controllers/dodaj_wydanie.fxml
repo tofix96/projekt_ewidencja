@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="glowny" alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projektzaliczeniowy.projektzaliczeniowy.controllers.DodajWydanieViewController">
+   <children>
+      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Podaj dane wydania do dodania" wrappingWidth="292.796875">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Text>
+      <GridPane alignment="CENTER" hgap="10.0" vgap="10.0">
+         <columnConstraints>
+            <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="ALWAYS" />
+            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="ALWAYS" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+            <RowConstraints />
+         </rowConstraints>
+         <children>
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Id sprzętu:" />
+            <ChoiceBox fx:id="idSprzetu" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Id klienta:" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="idKlienta" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data wydania:" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dataWydania" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data zwrotu:" GridPane.rowIndex="3" />
+            <DatePicker fx:id="dataZwrotu" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <AnchorPane>
+         <children>
+            <Button fx:id="dodaj" alignment="CENTER" disable="true" mnemonicParsing="false" onAction="#add" prefHeight="35.0" prefWidth="80.0" text="Dodaj" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+            <Button alignment="CENTER" layoutY="50.0" mnemonicParsing="false" onAction="#back" prefHeight="35.0" prefWidth="80.0" text="Wstecz" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0" />
+         </children>
+      </AnchorPane>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>

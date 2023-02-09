@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Text?>
+
+<VBox fx:id="edytujusunwydanie" alignment="CENTER" spacing="15.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.projektzaliczeniowy.projektzaliczeniowy.controllers.EdytujUsunWydanieViewController">
+   <children>
+      <GridPane hgap="10.0" vgap="10.0">
+         <columnConstraints>
+            <ColumnConstraints fillWidth="false" halignment="RIGHT" hgrow="ALWAYS" />
+            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="ALWAYS" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" />
+            <RowConstraints minHeight="10.0" />
+            <RowConstraints minHeight="10.0" />
+            <RowConstraints minHeight="10.0" />
+         </rowConstraints>
+         <children>
+                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Id sprzętu:" />
+                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Id klienta:" GridPane.rowIndex="1" />
+                      <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data wydania:" GridPane.rowIndex="2" />
+            <Text strokeType="OUTSIDE" strokeWidth="0.0" text="Data zwrotu:" GridPane.rowIndex="3" />
+            <ChoiceBox fx:id="idSprzetu" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" />
+            <ChoiceBox fx:id="idKlienta" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <DatePicker fx:id="dataWydania" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <DatePicker fx:id="dataZwrotu" prefHeight="25.0" prefWidth="175.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+      <GridPane hgap="10.0">
+         <columnConstraints>
+            <ColumnConstraints fillWidth="false" halignment="LEFT" hgrow="ALWAYS" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" />
+            <ColumnConstraints fillWidth="false" halignment="CENTER" hgrow="NEVER" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints />
+         </rowConstraints>
+         <children>
+                      <Button fx:id="zmien" alignment="CENTER" mnemonicParsing="false" onAction="#change" text="Zmień" GridPane.columnIndex="2">
+               <padding>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </padding>
+            </Button>
+                      <Button alignment="CENTER" mnemonicParsing="false" onAction="#delete" text="Usuń" GridPane.columnIndex="1">
+               <padding>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </padding>
+            </Button>
+                      <Button alignment="CENTER" mnemonicParsing="false" onAction="#back" text="Wstecz">
+               <padding>
+                  <Insets bottom="10.0" left="15.0" right="15.0" top="10.0" />
+               </padding>
+            </Button>
+         </children>
+      </GridPane>
+   </children>
+   <padding>
+      <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+   </padding>
+</VBox>
